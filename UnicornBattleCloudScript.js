@@ -9,7 +9,7 @@ handlers.OnForumPost = function (args, context) {
    
     //set up Gem VC request
     var balanceGemVCRequest = {};
-    balanceGemVCRequest.PlayFabId = profile.PlayerId;
+    balanceGemVCRequest.PlayFabId = currentPlayerId; //profile.PlayerId;
     balanceGemVCRequest.VirtualCurrency = "Gm";
     balanceGemVCRequest.Amount = psEvent.StatisticValue;;
     
