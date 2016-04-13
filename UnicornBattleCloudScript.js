@@ -6,7 +6,7 @@ handlers.onForumPosts = function (args, context) {
    var psEvent = context.playStreamEvent;
    var profile = context.playerProfile;
    var gmCount = psEvent.StatisticValue;
-   server.AddUserVirtualCurrency(profile.PlayFabId,"Gm",gmCount);
+   server.AddUserVirtualCurrency(profile.PlayerId,"Gm",gmCount);
    return { "Added " + gmCount + " gems." };
 }
 
