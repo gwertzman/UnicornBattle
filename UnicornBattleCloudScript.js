@@ -1,15 +1,6 @@
 //Unicorn Battle FB App ID: 403608796495072
 var defaultCatalog = "CharacterClasses";
 
-// this function will be called by PlayStream
-handlers.onForumPosts = function (args, context) {
-   var psEvent = context.playStreamEvent;
-   var profile = context.playerProfile;
-   var gmCount = psEvent.StatisticValue;
-   server.AddUserVirtualCurrency(profile.PlayerId,"Gm",gmCount);
-   return { "Added " + gmCount + " gems." };
-}
-
 handlers.CreateCharacter = function(args)
 {
 	//log.info(args.classDetails);
