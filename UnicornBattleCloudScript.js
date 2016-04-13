@@ -1,6 +1,7 @@
 //Unicorn Battle FB App ID: 403608796495072
 var defaultCatalog = "CharacterClasses";
 
+// this function will be called by PlayStream
 handlers.onForumPosts = function (args, context) {
    var psEvent = context.playStreamEvent;
    var profile = context.playerProfile;
