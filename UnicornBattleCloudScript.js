@@ -1,6 +1,22 @@
 //Unicorn Battle FB App ID: 403608796495072
 var defaultCatalog = "CharacterClasses";
 
+// this function will be called by PlayStream
+handlers.OnForumPost = function (args, context) {
+   var psEvent = context.playStreamEvent;
+   var profile = context.playerProfile;
+   var gmCount = psEvent.StatisticValue;
+   
+    //set up Gem VC request
+    var balanceGemVCRequest = {};
+    balanceGemVCRequest.PlayFabId = profile.PlayerId;
+    balanceGemVCRequest.VirtualCurrency = "Gm";
+    balanceGemVCRequest.Amount = psEvent.StatisticValue;;
+    
+    var result = server.AddUserVirtualCurrency(balanceGemVCRequest);
+    return (result);
+}
+
 handlers.CreateCharacter = function(args)
 {
 	//log.info(args.classDetails);
