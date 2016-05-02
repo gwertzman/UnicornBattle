@@ -22,6 +22,23 @@ handlers.OnForumPost = function (args, context) {
     return (result);
 }
 
+// this function will be called by PlayStream
+handlers.GrantXPBoost = function (args, context) {
+   var psEvent = context.playStreamEvent;
+   var profile = context.playerProfile;
+   var xpOld = psEvent.StatisticValue;
+   
+   var xpNew = xpOld * 1.1;
+   
+    //set up Statistic change
+    var xpRequest = {};
+    xpRequest.PlayFabId = currentPlayerId; //profile.PlayerId;
+    xpRequest.Statistics = [{StatisticName : "Total_XPGained", Value : xpNew}];
+
+    var result = server.UpdatePlayerStatistics(xpRequest);
+    return (result);
+}
+
 handlers.CreateCharacter = function(args)
 {
 	//log.info(args.classDetails);
