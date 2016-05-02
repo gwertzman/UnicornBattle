@@ -28,7 +28,7 @@ handlers.GrantXPBoost = function (args, context) {
    var profile = context.playerProfile;
    var xpOld = psEvent.StatisticValue;
    
-   var xpNew = xpOld * 1.1;
+   var xpNew = math.floor (xpOld * 1.1);
    
     //set up Statistic change
     var xpRequest = {};
