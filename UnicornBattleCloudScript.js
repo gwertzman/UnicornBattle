@@ -29,7 +29,7 @@ handlers.GrantXPBoost = function (args, context) {
    var xpNew = psEvent.StatisticValue;
    var xpOld = psEvent.StatisticPreviousValue;
    
-   xpNew = Math.floor ((xpNew - xpOld) * 1.1);
+   xpNew = Math.floor ((xpNew - xpOld) * 1.1) + xpNew;
    
     //set up Statistic change
     var xpRequest = {};
