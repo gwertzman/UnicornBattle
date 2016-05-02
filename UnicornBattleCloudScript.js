@@ -26,9 +26,10 @@ handlers.OnForumPost = function (args, context) {
 handlers.GrantXPBoost = function (args, context) {
    var psEvent = context.playStreamEvent;
    var profile = context.playerProfile;
-   var xpOld = psEvent.StatisticValue;
+   var xpNew = psEvent.StatisticValue;
+   var xpOld = psEvent.StatisticPreviousValue;
    
-   var xpNew = math.floor (xpOld * 1.1);
+   xpNew = Math.floor ((xpNew - xpOld) * 1.1);
    
     //set up Statistic change
     var xpRequest = {};
