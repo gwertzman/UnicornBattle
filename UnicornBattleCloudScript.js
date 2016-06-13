@@ -4,6 +4,7 @@
 // just showing off
 // testing cloudscript title event
 // just adding a comment
+// testing out GitHub integration
 
 //Unicorn Battle FB App ID: 403608796495072
 var defaultCatalog = "CharacterClasses";
