@@ -26,6 +26,21 @@ handlers.OnForumPost = function (args, context) {
 }
 
 // this function will be called by PlayStream
+handlers.GrantPlayerGift = function (args, context) {
+   var profile = context.playerProfile;
+   var gmCount = 100;
+
+    //set up Gem VC request
+    var balanceGemVCRequest = {};
+    balanceGemVCRequest.PlayFabId = currentPlayerId; //profile.PlayerId;
+    balanceGemVCRequest.VirtualCurrency = "Gm";
+    balanceGemVCRequest.Amount = gmCount;
+    
+    var result = server.AddUserVirtualCurrency(balanceGemVCRequest);
+    return (result);
+}
+
+// this function will be called by PlayStream
 handlers.GrantXPBoost = function (args, context) {
    var psEvent = context.playStreamEvent;
    var profile = context.playerProfile;
