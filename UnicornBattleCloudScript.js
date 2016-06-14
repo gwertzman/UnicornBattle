@@ -1,10 +1,4 @@
-// testing
-// it's beautiful today in LA
-// how is montreal?
-// just showing off
-// testing cloudscript title event
-// just adding a comment
-// testing out GitHub integration
+// happy to be at E3
 
 //Unicorn Battle FB App ID: 403608796495072
 var defaultCatalog = "CharacterClasses";
