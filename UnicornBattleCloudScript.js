@@ -1,4 +1,4 @@
-// happy to be at E3
+// happy to be in Glendale
 
 //Unicorn Battle FB App ID: 403608796495072
 var defaultCatalog = "CharacterClasses";
