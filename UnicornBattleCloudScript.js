@@ -34,6 +34,22 @@ handlers.GrantPlayerGift = function (args, context) {
     return (result);
 }
 
+// this function will be called by a scheduled task
+handlers.GrantPlayerCurrencyViaTask = function (args) {
+   var vcType = args.currency;
+   var vcCount = args.count;
+   var playerId = args.playerId;
+
+    //set up Gem VC request
+    var balanceGemVCRequest = {};
+    balanceGemVCRequest.PlayFabId = player; //profile.PlayerId;
+    balanceGemVCRequest.VirtualCurrency = vcType;
+    balanceGemVCRequest.Amount = vcCount;
+    
+    var result = server.AddUserVirtualCurrency(balanceGemVCRequest);
+    return (result);
+}
+
 // this function will be called by PlayStream
 handlers.GrantXPBoost = function (args, context) {
    var psEvent = context.playStreamEvent;
