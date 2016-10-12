@@ -42,7 +42,7 @@ handlers.GrantPlayerCurrencyViaTask = function (args) {
 
     //set up Gem VC request
     var balanceGemVCRequest = {};
-    balanceGemVCRequest.PlayFabId = player; //profile.PlayerId;
+    balanceGemVCRequest.PlayFabId = playerId; //profile.PlayerId;
     balanceGemVCRequest.VirtualCurrency = vcType;
     balanceGemVCRequest.Amount = vcCount;
     
