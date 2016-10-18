@@ -36,9 +36,10 @@ handlers.GrantPlayerGift = function (args, context) {
 
 // this function will be called by a scheduled task
 handlers.GrantPlayerCurrencyViaTask = function (args) {
-   var vcType = args.currency;
-   var vcCount = args.count;
-   var playerId = args.playerId;
+   var argsJson = JSON.parse(args);
+   var vcType = argsJson.currency;
+   var vcCount = argsJson.count;
+   var playerId = argsJson.playerId;
 
     //set up Gem VC request
     var balanceGemVCRequest = {};
