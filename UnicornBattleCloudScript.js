@@ -1,3 +1,4 @@
+// glad it's now snowing today
 var defaultCatalog = "CharacterClasses";
 var GEM_CURRENCY_CODE = "GE";
 var GOLD_CURRENCY_CODE = "AU";
