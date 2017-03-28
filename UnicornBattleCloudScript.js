@@ -1,4 +1,4 @@
-// glad it's now snowing today
+// glad it's not snowing today in Montreal
 var defaultCatalog = "CharacterClasses";
 var GEM_CURRENCY_CODE = "GE";
 var GOLD_CURRENCY_CODE = "AU";
